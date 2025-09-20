@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NicoAutomates | Affordable Automation & Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#00f0ff',
+                        accent2: '#ff00f0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+        }
+        
+        .glow-box {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+        
+        .gradient-border {
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            background: linear-gradient(to right, #0f172a, #0f172a);
+        }
+        
+        .gradient-border::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00f0ff, #ff00f0);
+            z-index: -1;
+            border-radius: inherit;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-primary border-b border-gray-800 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Selector de idioma -->
+<select id="languageSwitcher" class="bg-secondary text-white px-2 py-1 rounded">
+  <option value="en">EN</option>
+  <option value="fr">FR</option>
+  <option value="es">ES</option>
+</select>
+            <div class="flex items-center space-x-2">
+                <i data-feather="zap" class="text-accent"></i>
+                <span class="text-xl font-bold text-white">NicoAutomates</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-accent transition" data-i18n="nav_services">Services</a>
+                <a href="#about" class="text-gray-300 hover:text-accent transition" data-i18n="nav_about">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-accent transition" data-i18n="nav_contact">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="container mx-auto px-4 py-24 md:py-32 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 glow-text" data-i18n="hero_title"data-aos="fade-up">
+                <span class="text-accent">Future-Proof</span> Your Business With AI
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mb-10"data-i18n="hero_subtitle" data-aos="fade-up" data-aos-delay="100">
+                Affordable digital solutions designed for small businesses to <span class="text-accent font-medium">automate, grow, and thrive</span> in the digital age.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-accent to-accent2 rounded-full font-medium text-primary hover:opacity-90 transition flex items-center justify-center" data-i18n="hero_cta_ready">
+                    <i data-feather="zap" class="mr-2"></i> Im ready
+                </a>
+                <a href="#services" class="px-8 py-3 border border-accent rounded-full font-medium text-accent hover:bg-accent hover:text-primary transition flex items-center justify-center" data-i18n="hero_cta_case">
+                    <i data-feather="eye" class="mr-2"></i> See Case Studies
+                </a>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-primary"></div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="results_title">Proven <span class="text-accent">Results</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto" data-i18n="results_subtitle">See the impact our solutions have delivered for businesses like yours.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl font-bold text-accent mb-2">+83%</div>
+                    <p class="text-gray-300" data-i18n="results_metric1">Increase in booking efficiency</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl font-bold text-accent mb-2">+50%</div>
+                    <p class="text-gray-300" data-i18n="results_metric2">More qualified leads generated</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-5xl font-bold text-accent mb-2">3.2x</div>
+                    <p class="text-gray-300" data-i18n="results_metric3">ROI on ad campaigns</p>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="max-w-4xl mx-auto">
+                <div class="gradient-border rounded-xl p-8" data-aos="fade-up">
+                    <div class="flex items-center mb-6">
+                        <img src="http://static.photos/people/200x200/1" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold" data-i18n="testimonial_name">Sarah K.</h4>
+                            <p class="text-gray-400 text-sm" data-i18n="testimonial_role">Small Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic" data-i18n="testimonial_text">"Nico's automation system saved me over 10 hours a week in administrative work. As a solopreneur, this has been game-changing for my productivity and work-life balance."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="process_title">Our <span class="text-accent">Process</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto" data-i18n="process_subtitle">Simple, transparent workflow designed for your success</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 glow-box">
+                        <span class="text-accent font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="font-bold mb-2" data-i18n="process_step1">Discovery</h3>
+                    <p class="text-gray-300" data-i18n="process_step1_desc">We analyze your business needs and goals</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 glow-box">
+                        <span class="text-accent font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="font-bold mb-2" data-i18n="process_step2">Solution Design</h3>
+                    <p class="text-gray-300" data-i18n="process_step2_desc">Custom strategy tailored to your business</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 glow-box">
+                        <span class="text-accent font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="font-bold mb-2" data-i18n="process_step3">Implementation</h3>
+                    <p class="text-gray-300" data-i18n="process_step3_desc">Seamless setup with minimal disruption</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 glow-box">
+                        <span class="text-accent font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="font-bold mb-2" data-i18n="process_step4">Optimization</h3>
+                    <p class="text-gray-300" data-i18n="process_step4_desc">Continuous improvements for best results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="services_title">Digital Solutions <span class="text-accent">That Deliver</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto" data-i18n="services_subtitle">Modern, affordable services designed to help small businesses compete in today's digital landscape.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="gradient-border rounded-xl p-6 service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-6 glow-box">
+                        <i data-feather="clock" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="service1_title">Business Automation</h3>
+                    <p class="text-gray-300 mb-4" data-i18n="service1_desc">
+                        Streamline your operations by automating bookings, calls, and messages into a single, organized calendar. Save hours each week and reduce costly scheduling errors.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service1_benefit1">Centralized scheduling system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service1_benefit2">24/7 automated bookings</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service1_benefit3">Seamless calendar integration</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="gradient-border rounded-xl p-6 service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-6 glow-box">
+                        <i data-feather="users" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="service2_title">Lead Generation</h3>
+                    <p class="text-gray-300 mb-4" data-i18n="service2_desc">
+                        Get more qualified leads with targeted outreach campaigns. I research and identify your ideal customers, then send personalized emails that convert.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service2_benefit1">Custom lead research</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service2_benefit2">Personalized email sequences</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service2_benefit3">Performance tracking</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="gradient-border rounded-xl p-6 service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-6 glow-box">
+                        <i data-feather="trending-up" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="service3_title">Ad Campaigns</h3>
+                    <p class="text-gray-300 mb-4" data-i18n="service3_desc">
+                        Increase your visibility and sales with professionally managed ad campaigns. I create and optimize ads that reach your ideal customers across platforms.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service3_benefit1">Targeted audience research</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service3_benefit2">High-converting ad creatives</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-accent mr-2 w-4 h-4"></i>
+                            <span data-i18n="service3_benefit3">Continuous optimization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-20 bg-gradient-to-br from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="why_title">Why Choose <span class="text-accent">NicoAutomates</span>?</h2>
+                <div class="grid md:grid-cols-2 gap-8 text-left mb-10">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4 mt-1 glow-box">
+                            <i data-feather="dollar-sign" class="text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2" data-i18n="why1_title">Student Pricing</h3>
+                            <p class="text-gray-300" data-i18n="why1_desc">Professional services at student-friendly rates, giving you enterprise-level solutions without the enterprise price tag.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4 mt-1 glow-box">
+                            <i data-feather="clock" class="text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2" data-i18n="why2_title">Fast Turnaround</h3>
+                            <p class="text-gray-300" data-i18n="why2_desc">As a digital native, I implement solutions quickly without sacrificing quality or attention to detail.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4 mt-1 glow-box">
+                            <i data-feather="book" class="text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2" data-i18n="why3_title">Cutting-Edge Knowledge</h3>
+                            <p class="text-gray-300" data-i18n="why3_desc">Combining academic learning with practical application to deliver innovative solutions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4 mt-1 glow-box">
+                            <i data-feather="heart" class="text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2" data-i18n="why4_title">Personal Investment</h3>
+                            <p class="text-gray-300" data-i18n="why4_desc">I treat every client's business as if it were my own, with a focus on delivering real, measurable results.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-accent to-accent2 rounded-full font-medium text-primary hover:opacity-90 transition inline-flex items-center" data-i18n="cta_btn">
+                    <i data-feather="calendar" class="mr-2"></i> Book Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="w-full h-full bg-accent absolute -z-10 rounded-xl top-4 left-4"></div>
+                        <img src="http://static.photos/technology/640x360/42" alt="Digital Solutions" class="rounded-xl w-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="about_title">About <span class="text-accent">Me</span></h2>
+                    <p class="text-gray-300 mb-6" data-i18n="about_desc1">
+                        As a university student with a passion for technology and business growth, I've dedicated myself to creating <span class="text-accent font-medium">affordable digital solutions</span> for small and medium-sized businesses.
+                    </p>
+                    <p class="text-gray-300 mb-6" data-i18n="about_desc2">
+                        I understand the challenges small businesses face in today's competitive digital landscape. That's why I offer <span class="text-accent font-medium">high-quality services</span> at student-friendly prices, helping you implement the same automation and marketing strategies used by larger companies.
+                    </p>
+                    <p class="text-gray-300 mb-8" data-i18n="about_desc3">
+                        My approach combines <span class="text-accent font-medium">technical expertise</span> with a deep understanding of business needs, delivering solutions that are both innovative and practical.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i data-feather="award" class="text-accent mr-2"></i>
+                            <span data-i18n="about_benefit1">Affordable Pricing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="zap" class="text-accent mr-2"></i>
+                            <span data-i18n="about_benefit2">Fast Delivery</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="heart" class="text-accent mr-2"></i>
+                            <span data-i18n="about_benefit3">Passionate Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="contact_title">Ready to <span class="text-accent">Transform</span> Your Business?</h2>
+                <p class="text-xl text-gray-300 mb-10" data-i18n="contact_subtitle">
+                    Limited spots available - Book your free 30-minute consultation today to discuss your specific business needs and how we can help.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:sxlan8n@gmail.com" class="px-8 py-3 bg-gradient-to-r from-accent to-accent2 rounded-full font-medium text-primary hover:opacity-90 transition flex items-center justify-center" data-i18n="contact_email_btn">
+                        <i data-feather="mail" class="mr-2"></i> Email Me
+                    </a>
+                    <a href="tel:+659267161" class="px-8 py-3 border border-accent rounded-full font-medium text-accent hover:bg-accent hover:text-primary transition flex items-center justify-center" data-i18n="contact_call_btn">
+                        <i data-feather="phone" class="mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <i data-feather="zap" class="text-accent"></i>
+                    <span class="text-xl font-bold text-white">NicoAutomates</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-accent transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-accent transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-accent transition">
+                        <i data-feather="space-x-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NicoAutomates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 800, once: true });
+        feather.replace();
+
+        // Language translations
+        const translations = {
+            en: {
+                nav_services: "Services",
+                nav_about: "About",
+                nav_contact: "Contact",
+                hero_title: '<span class="text-accent">Future-Proof</span> Your Business',
+                hero_subtitle: 'Affordable digital solutions designed for small businesses to <span class="text-accent font-medium">automate, grow, and thrive</span> in the digital age.',
+                hero_cta_ready: '<i data-feather="zap" class="mr-2"></i> Im ready',
+                hero_cta_case: '<i data-feather="eye" class="mr-2"></i> See Case Studies',
+                results_title: 'Proven <span class="text-accent">Results</span>',
+                results_subtitle: 'See the impact our solutions have delivered for businesses like yours.',
+                results_metric1: 'Increase in booking efficiency',
+                results_metric2: 'More qualified leads generated',
+                results_metric3: 'ROI on ad campaigns',
+                testimonial_name: 'Sarah K.',
+                testimonial_role: 'Small Business Owner',
+                testimonial_text: '"Nico\'s automation system saved me over 10 hours a week in administrative work. As a solopreneur, this has been game-changing for my productivity and work-life balance."',
+                process_title: 'Our <span class="text-accent">Process</span>',
+                process_subtitle: 'Simple, transparent workflow designed for your success',
+                process_step1: 'Discovery',
+                process_step1_desc: 'We analyze your business needs and goals',
+                process_step2: 'Solution Design',
+                process_step2_desc: 'Custom strategy tailored to your business',
+                process_step3: 'Implementation',
+                process_step3_desc: 'Seamless setup with minimal disruption',
+                process_step4: 'Optimization',
+                process_step4_desc: 'Continuous improvements for best results',
+                services_title: 'Digital Solutions <span class="text-accent">That Deliver</span>',
+                services_subtitle: 'Modern, affordable services designed to help small businesses compete in today\'s digital landscape.',
+                service1_title: 'Business Automation',
+                service1_desc: 'Streamline your operations by automating bookings, calls, and messages into a single, organized calendar. Save hours each week and reduce costly scheduling errors.',
+                service1_benefit1: 'Centralized scheduling system',
+                service1_benefit2: '24/7 automated bookings',
+                service1_benefit3: 'Seamless calendar integration',
+                service2_title: 'Lead Generation',
+                service2_desc: 'Get more qualified leads with targeted outreach campaigns. I research and identify your ideal customers, then send personalized emails that convert.',
+                service2_benefit1: 'Custom lead research',
+                service2_benefit2: 'Personalized email sequences',
+                service2_benefit3: 'Performance tracking',
+                service3_title: 'Ad Campaigns',
+                service3_desc: 'Increase your visibility and sales with professionally managed ad campaigns. I create and optimize ads that reach your ideal customers across platforms.',
+                service3_benefit1: 'Targeted audience research',
+                service3_benefit2: 'High-converting ad creatives',
+                service3_benefit3: 'Continuous optimization',
+                why_title: 'Why Choose <span class="text-accent">NicoAutomates</span>?',
+                why1_title: 'Student Pricing',
+                why1_desc: 'Professional services at student-friendly rates, giving you enterprise-level solutions without the enterprise price tag.',
+                why2_title: 'Fast Turnaround',
+                why2_desc: 'As a digital native, I implement solutions quickly without sacrificing quality or attention to detail.',
+                why3_title: 'Cutting-Edge Knowledge',
+                why3_desc: 'Combining academic learning with practical application to deliver innovative solutions.',
+                why4_title: 'Personal Investment',
+                why4_desc: 'I treat every client\'s business as if it were my own, with a focus on delivering real, measurable results.',
+                about_title: 'About <span class="text-accent">Me</span>',
+                about_desc1: 'As a university student with a passion for technology and business growth, I\'ve dedicated myself to creating <span class="text-accent font-medium">affordable digital solutions</span> for small and medium-sized businesses.',
+                about_desc2: 'I understand the challenges small businesses face in today\'s competitive digital landscape. That\'s why I offer <span class="text-accent font-medium">high-quality services</span> at student-friendly prices, helping you implement the same automation and marketing strategies used by larger companies.',
+                about_desc3: 'My approach combines <span class="text-accent font-medium">technical expertise</span> with a deep understanding of business needs, delivering solutions that are both innovative and practical.',
+                about_benefit1: 'Affordable Pricing',
+                about_benefit2: 'Fast Delivery',
+                about_benefit3: 'Passionate Service',
+                contact_title: 'Ready to <span class="text-accent">Transform</span> Your Business?',
+                contact_subtitle: 'Limited spots available - Book your free 30-minute consultation today to discuss your specific business needs and how we can help.',
+                cta_btn: '<i data-feather="calendar" class="mr-2"></i> Book Free Consultation',
+                contact_email_btn: '<i data-feather="mail" class="mr-2"></i> Email Me',
+                contact_call_btn: '<i data-feather="phone" class="mr-2"></i> Call Now'
+            },
+            fr: {
+                nav_services: "Services",
+                nav_about: "À propos",
+                nav_contact: "Contact",
+                hero_title: '<span class="text-accent">Préparez l\'avenir</span> de votre entreprise',
+                hero_subtitle: 'Des solutions numériques abordables pour aider les petites entreprises à <span class="text-accent font-medium">automatiser, croître et prospérer</span> à l\'ère numérique.',
+                hero_cta_ready: '<i data-feather="zap" class="mr-2"></i> Je suis prêt',
+                hero_cta_case: '<i data-feather="eye" class="mr-2"></i> Voir des études de cas',
+                results_title: 'Des <span class="text-accent">résultats</span> prouvés',
+                results_subtitle: 'Découvrez l\'impact de nos solutions pour des entreprises comme la vôtre.',
+                results_metric1: 'Augmentation de l\'efficacité des réservations',
+                results_metric2: 'Plus de leads qualifiés générés',
+                results_metric3: 'ROI sur les campagnes publicitaires',
+                testimonial_name: 'Sarah K.',
+                testimonial_role: 'Propriétaire de petite entreprise',
+                testimonial_text: '"Le système d\'automatisation de Nico m\'a permis d\'économiser plus de 10 heures par semaine de travail administratif. En tant que solopreneur, cela a changé ma productivité et mon équilibre vie pro/perso."',
+                process_title: 'Notre <span class="text-accent">Processus</span>',
+                process_subtitle: 'Un flux de travail simple et transparent pour votre succès',
+                process_step1: 'Découverte',
+                process_step1_desc: 'Nous analysons vos besoins et objectifs',
+                process_step2: 'Conception de la solution',
+                process_step2_desc: 'Stratégie personnalisée pour votre entreprise',
+                process_step3: 'Mise en œuvre',
+                process_step3_desc: 'Mise en place sans perturbation',
+                process_step4: 'Optimisation',
+                process_step4_desc: 'Améliorations continues pour de meilleurs résultats',
+                services_title: 'Des solutions digitales <span class="text-accent">qui livrent</span>',
+                services_subtitle: 'Des services modernes et abordables pour aider les petites entreprises à rivaliser dans le paysage numérique actuel.',
+                service1_title: 'Automatisation d\'entreprise',
+                service1_desc: 'Rationalisez vos opérations en automatisant les réservations, appels et messages dans un seul calendrier organisé. Gagnez des heures chaque semaine et réduisez les erreurs de planification.',
+                service1_benefit1: 'Système de planification centralisé',
+                service1_benefit2: 'Réservations automatisées 24/7',
+                service1_benefit3: 'Intégration de calendrier transparente',
+                service2_title: 'Génération de leads',
+                service2_desc: 'Obtenez plus de leads qualifiés grâce à des campagnes ciblées. Je recherche vos clients idéaux et envoie des emails personnalisés qui convertissent.',
+                service2_benefit1: 'Recherche de leads personnalisée',
+                service2_benefit2: 'Séquences d\'emails personnalisées',
+                service2_benefit3: 'Suivi des performances',
+                service3_title: 'Campagnes publicitaires',
+                service3_desc: 'Augmentez votre visibilité et vos ventes avec des campagnes publicitaires gérées professionnellement. Je crée et optimise des annonces pour toucher vos clients idéaux.',
+                service3_benefit1: 'Recherche d\'audience ciblée',
+                service3_benefit2: 'Créations publicitaires performantes',
+                service3_benefit3: 'Optimisation continue',
+                why_title: 'Pourquoi choisir <span class="text-accent">NicoAutomates</span> ?',
+                why1_title: 'Tarifs étudiants',
+                why1_desc: 'Des services professionnels à des prix étudiants, pour des solutions de niveau entreprise sans le prix.',
+                why2_title: 'Rapidité d\'exécution',
+                why2_desc: 'En tant que natif du numérique, j\'implémente rapidement sans sacrifier la qualité.',
+                why3_title: 'Connaissances de pointe',
+                why3_desc: 'Allier apprentissage académique et pratique pour des solutions innovantes.',
+                why4_title: 'Investissement personnel',
+                why4_desc: 'Je traite chaque entreprise cliente comme la mienne, avec un focus sur des résultats réels.',
+                about_title: 'À propos de <span class="text-accent">moi</span>',
+                about_desc1: 'Étudiant passionné de technologie et de croissance, je crée des <span class="text-accent font-medium">solutions digitales abordables</span> pour PME.',
+                about_desc2: 'Je comprends les défis des petites entreprises. J\'offre des <span class="text-accent font-medium">services de qualité</span> à prix étudiant, pour appliquer les stratégies des grandes entreprises.',
+                about_desc3: 'Mon approche allie <span class="text-accent font-medium">expertise technique</span> et compréhension des besoins business, pour des solutions innovantes et pratiques.',
+                about_benefit1: 'Tarifs abordables',
+                about_benefit2: 'Livraison rapide',
+                about_benefit3: 'Service passionné',
+                contact_title: 'Prêt à <span class="text-accent">transformer</span> votre entreprise ?',
+                contact_subtitle: 'Places limitées - Réservez votre consultation gratuite de 30 minutes pour discuter de vos besoins spécifiques et comment nous pouvons vous aider.',
+                cta_btn: '<i data-feather="calendar" class="mr-2"></i> Réserver une consultation gratuite',
+                contact_email_btn: '<i data-feather="mail" class="mr-2"></i> Envoyez-moi un email',
+                contact_call_btn: '<i data-feather="phone" class="mr-2"></i> Appeler maintenant'
+            },
+            es: {
+                nav_services: "Servicios",
+                nav_about: "Acerca de",
+                nav_contact: "Contacto",
+                hero_title: '<span class="text-accent">Prepara el futuro</span> de tu negocio',
+                hero_subtitle: 'Soluciones digitales asequibles para que las pequeñas empresas <span class="text-accent font-medium">automaticen, crezcan y prosperen</span> en la era digital.',
+                hero_cta_ready: '<i data-feather="zap" class="mr-2"></i> Estoy listo',
+                hero_cta_case: '<i data-feather="eye" class="mr-2"></i> Ver casos de éxito',
+                results_title: 'Resultados <span class="text-accent">comprobados</span>',
+                results_subtitle: 'Mira el impacto que nuestras soluciones han tenido en negocios como el tuyo.',
+                results_metric1: 'Aumento en la eficiencia de reservas',
+                results_metric2: 'Más leads calificados generados',
+                results_metric3: 'ROI en campañas publicitarias',
+                testimonial_name: 'Sarah K.',
+                testimonial_role: 'Propietaria de pequeño negocio',
+                testimonial_text: '"El sistema de automatización de Nico me ahorró más de 10 horas semanales en tareas administrativas. Como emprendedora, esto cambió mi productividad y mi equilibrio vida-trabajo."',
+                process_title: 'Nuestro <span class="text-accent">proceso</span>',
+                process_subtitle: 'Flujo de trabajo simple y transparente para tu éxito',
+                process_step1: 'Descubrimiento',
+                process_step1_desc: 'Analizamos tus necesidades y objetivos',
+                process_step2: 'Diseño de solución',
+                process_step2_desc: 'Estrategia personalizada para tu negocio',
+                process_step3: 'Implementación',
+                process_step3_desc: 'Configuración sin interrupciones',
+                process_step4: 'Optimización',
+                process_step4_desc: 'Mejoras continuas para mejores resultados',
+                services_title: 'Soluciones digitales <span class="text-accent">que funcionan</span>',
+                services_subtitle: 'Servicios modernos y asequibles para ayudar a las pequeñas empresas a competir en el mundo digital.',
+                service1_title: 'Automatización de negocios',
+                service1_desc: 'Optimiza tus operaciones automatizando reservas, llamadas y mensajes en un solo calendario. Ahorra horas cada semana y reduce errores.',
+                service1_benefit1: 'Sistema de agenda centralizado',
+                service1_benefit2: 'Reservas automáticas 24/7',
+                service1_benefit3: 'Integración de calendario',
+                service2_title: 'Generación de leads',
+                service2_desc: 'Consigue más leads calificados con campañas dirigidas. Investigo y contacto a tus clientes ideales con emails personalizados.',
+                service2_benefit1: 'Investigación de leads personalizada',
+                service2_benefit2: 'Secuencias de emails personalizadas',
+                service2_benefit3: 'Seguimiento de resultados',
+                service3_title: 'Campañas publicitarias',
+                service3_desc: 'Aumenta tu visibilidad y ventas con campañas gestionadas profesionalmente. Creo y optimizo anuncios para llegar a tus clientes ideales.',
+                service3_benefit1: 'Investigación de audiencia',
+                service3_benefit2: 'Creatividades de alto rendimiento',
+                service3_benefit3: 'Optimización continua',
+                why_title: '¿Por qué elegir <span class="text-accent">NicoAutomates</span>?',
+                why1_title: 'Precios de estudiante',
+                why1_desc: 'Servicios profesionales a precios accesibles, soluciones de nivel empresarial sin el coste.',
+                why2_title: 'Entrega rápida',
+                why2_desc: 'Como nativo digital, implemento rápido sin sacrificar calidad.',
+                why3_title: 'Conocimiento de vanguardia',
+                why3_desc: 'Combino formación académica y práctica para soluciones innovadoras.',
+                why4_title: 'Inversión personal',
+                why4_desc: 'Trato cada negocio como propio, enfocado en resultados reales.',
+                about_title: 'Sobre <span class="text-accent">mí</span>',
+                about_desc1: 'Como estudiante universitario apasionado por la tecnología y el crecimiento, creo <span class="text-accent font-medium">soluciones digitales asequibles</span> para pymes.',
+                about_desc2: 'Entiendo los retos de las pequeñas empresas. Ofrezco <span class="text-accent font-medium">servicios de calidad</span> a precios accesibles, aplicando estrategias de grandes empresas.',
+                about_desc3: 'Mi enfoque combina <span class="text-accent font-medium">experiencia técnica</span> y comprensión de negocios, para soluciones innovadoras y prácticas.',
+                about_benefit1: 'Precios accesibles',
+                about_benefit2: 'Entrega rápida',
+                about_benefit3: 'Servicio apasionado',
+                contact_title: '¿Listo para <span class="text-accent">transformar</span> tu negocio?',
+                contact_subtitle: 'Cupos limitados - Reserva tu consulta gratuita de 30 minutos para hablar de tus necesidades y cómo podemos ayudarte.',
+                cta_btn: '<i data-feather="calendar" class="mr-2"></i> Reserva consulta gratis',
+                contact_email_btn: '<i data-feather="mail" class="mr-2"></i> Envíame un correo',
+                contact_call_btn: '<i data-feather="phone" class="mr-2"></i> Llamar ahora'
+            }
+        };
+
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            feather.replace(); // Re-render icons after language change
+        }
+
+        document.getElementById('languageSwitcher').addEventListener('change', function() {
+            updateLanguage(this.value);
+        });
+    </script>
+</body>
+</html>
