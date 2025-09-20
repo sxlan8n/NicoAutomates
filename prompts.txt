@@ -1,0 +1,36 @@
+"Create a modern portfolio website for a university student who offers affordable digital solutions to small and medium-sized businesses. The design should feature a dark color palette with neon accents, giving it a simple yet futuristic aesthetic.
+
+The homepage header should be short, impactful, and futuristic, instantly communicating professionalism and innovation.
+
+Content sections should highlight:
+
+Automation Services: Explain how I automate bookings, calls, and messages into a single calendar to save businesses significant time and money.
+
+Lead Generation & Outreach: Showcase my service of generating leads and sending personalized mass emails to potential clients.
+
+Ad Campaign Creation: Describe how I help small businesses run ad campaigns to increase visibility and sales.
+
+Tone: Professional but approachable, emphasizing affordability and efficiency for small and medium-sized businesses.
+
+Layout should include:
+
+A clean hero section with the futuristic header.
+
+Service descriptions with clear benefit statements.
+
+A simple 'About Me' section highlighting that I’m a university student offering modern, affordable solutions.
+
+A call-to-action section encouraging potential clients to reach out for affordable, innovative solutions.
+
+Ensure the final result feels trustworthy, forward-thinking, and business-friendly."
+Key ideas to implement:
+
+Case studies/results section
+
+Client testimonials (even if you're a beginner, you can use testimonials from academic projects or first clients)
+
+Clear work process
+
+More details about your unique value proposition
+
+More strategic calls to action
